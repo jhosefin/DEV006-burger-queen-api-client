@@ -24,12 +24,17 @@ a:hover {
 }
 
 body {
-  margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100vh; 
   background-image: url("./assets/Hobby.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: beige;
 }
 
 h1 {
@@ -67,4 +72,12 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+body img{
+  position:absolute;
+  width: 15rem;
+  height: 15rem;
+  margin-top: -30rem;
+  margin-left: -45rem;
 }
