@@ -48,10 +48,9 @@ h1 {
   }
 }
 
-body img{
-  position:absolute;
+.logo{
   width: 15rem;
   height: 15rem;
-  margin-top: -30rem;
-  margin-left: -45rem;
+  margin: -80% 2rem -50% -220px;
+  opacity: 0.5;
 }

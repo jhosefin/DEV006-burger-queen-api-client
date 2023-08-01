@@ -97,8 +97,10 @@ const Login: React.FC = () => {
   }, []);
   return (
     <div className='login'>
-      <img src={burger} alt="logo"/>
-      {today && <h3 className='today'>{today.toDateString()}</h3>}
+      <section className='fecha'>
+        <img src={burger} alt="logo"/>
+        {today && <h3 className='today'>{today.toDateString()}</h3>}
+      </section>
     <h2>Login</h2>
     {error && <p className='error'>{error}</p>}
     <form onSubmit={handleSubmit}>
