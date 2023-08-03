@@ -19,6 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   background-size: cover;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh; 
   background-image: url("./assets/Hobby.png");
@@ -46,11 +47,4 @@ h1 {
   button {
     background-color: #f9f9f9;
   }
-}
-
-.logo{
-  width: 15rem;
-  height: 15rem;
-  margin: -80% 2rem -50% -220px;
-  opacity: 0.5;
 }
