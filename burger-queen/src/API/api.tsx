@@ -1,5 +1,5 @@
 const BASE_URL = 'https://dev-006-burger-queen-api.vercel.app';
-import { MyFormData } from '../Login/Login';
+import { MyFormData } from '../components/Login/Login';
 
 interface LoginResponse {
   accessToken: string;

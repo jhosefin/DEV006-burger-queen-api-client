@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent, useEffect, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { login, getUserData } from '../API/api';
+import { login, getUserData } from '../../API/api';
 import './Login.css'
 
 /* import burger from '../img/Cheeseburger.png' */
@@ -11,14 +11,14 @@ export interface MyFormData {
 }
 
 const Login: React.FC = () => {
-  const navigate = useNavigate();
+
   const [formData, setFormData] = useState<MyFormData>({
     email: '',
     password: '',
   });
 
   const [error, setError] = useState<string>('');
-
+  const navigate = useNavigate();
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError('');
@@ -74,7 +74,7 @@ const Login: React.FC = () => {
     <div className="form-group">
     <label htmlFor="email">Email:</label>
     <input
-      type="email"
+      type="text"
       id="email"
       name="email"
       value={formData.email}

@@ -1,0 +1,50 @@
+.logo{
+    width: 30%;
+    margin-top: -4rem;
+    margin-left: -40rem;
+}
+.container{
+    font-family: 'Amaranth', sans-serif;
+    width: 200%;
+    margin-left: -11rem;
+}
+#menu{
+    font-family: 'Amiri', serif;
+    font-size: 50px;
+    margin-left: -20rem;
+}
+#breackfast{
+    color: #EEA035;
+}
+#lunch{
+    color: #ACDBDF;
+}
+#contenedor-principal{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.cards-breakfast{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+}
+.cards-lunch{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+}
+.derecha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}

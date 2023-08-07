@@ -1,0 +1,25 @@
+.d-flex{
+    background-color: white;
+    font-family: 'Amaranth', sans-serif;
+    border-radius: 1rem;
+    width: 120vh;
+    height: 60vh;
+}
+.d-flex img{
+    width: 50%;
+    height: 80%;
+}
+.btn{
+    border-radius: 3px;
+    border: 1px solid transparent;
+    background-color: #EEA035;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    width: 70%;
+    height: 3rem;
+}
+.btn:hover {
+    background-color: rgb(246, 195, 125);
+    color: #fbfbfb;
+    border-color: #EEA035;
+  }
