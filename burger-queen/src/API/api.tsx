@@ -10,6 +10,14 @@ interface UserData {
   // Puedes agregar más propiedades según los datos que necesitas obtener del usuario
 }
 
+interface Product {
+  _id: string;
+  name: string;
+  price: number;
+  image: string;
+  type: string;
+  dateEntry: string;
+}
 export const login = async (formData: MyFormData): Promise<LoginResponse> => {
   const response = await fetch(`${BASE_URL}/login`, {
     method: 'POST',
@@ -39,4 +47,23 @@ export const getUserData = async (email: string, accessToken: string): Promise<U
     throw new Error('Error al obtener los datos del usuario.');
   }
   return response.json();
+};
+
+export const getProductsData = async (accessToken: string): Promise<Product[]> => {
+
+  const headers = {
+    'Authorization': `Bearer ${accessToken}`
+  };
+
+  const response = await fetch(`${BASE_URL}/products`, {
+    method: 'GET',
+    headers: headers
+  });
+
+  if (!response.ok) {
+    throw new Error('Error al obtener los productos.');
+  }
+
+  const data = await response.json(); // Esperar a que se resuelva la promesa
+  return data;
 };
