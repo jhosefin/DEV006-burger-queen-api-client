@@ -52,8 +52,11 @@ const App: React.FC = () => {
 export default App;
 const rootElement = document.getElementById('root');
 
-ReactDOM.createRoot(rootElement!).render(
+ReactDOM.createRoot(rootElement as HTMLElement).render(
   <React.StrictMode>
       <App />
   </React.StrictMode>
 );
+/* const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement  as HTMLElement);
+root.render(<App />); */
