@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import notFounImg from '../img/404.gif'
 import './NotFound.css'
 
 const NotFound: React.FC = () => {
@@ -10,7 +11,7 @@ const NotFound: React.FC = () => {
   };
   return (
     <div className="d-flex align-items-center justify-content-center">
-      <img src='./src/components/img/404.gif' alt="404" />
+      <img src={notFounImg} alt="404" />
       <div className="text-center">
           <h1 className="display-1 fw-bold">404</h1>
           <p className="fs-3"> <span className="text-danger">Opps!</span> Page not found.</p>

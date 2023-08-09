@@ -69,7 +69,7 @@ const Login: React.FC = () => {
   return (
     <div className='login'>
     <form onSubmit={handleSubmit}>
-    <h2>Login</h2>
+    <h2>Welcome</h2>
     {error && <p className='error'>{error}</p>}
     <div className="form-group">
     <label htmlFor="email">Email:</label>
