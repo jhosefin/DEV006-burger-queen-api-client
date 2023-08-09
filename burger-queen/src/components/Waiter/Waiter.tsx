@@ -16,17 +16,17 @@ const Waiter: React.FC =() => {
 
     useEffect(() => {
       const token = localStorage.getItem('accessToken'); // Asegúrate de que esté almacenado como 'accessToken'
-      console.log(token)
-      if (token) {
-        // Obtén los productos utilizando el token
-        getProductsData(token)
-          .then((data) => {
-            setProducts(data);
-          })
-          .catch((error) => {
-            console.error('Error al obtener los productos:', error);
-          });
-      }
+        console.log(token)
+        if (token) {
+            // Obtén los productos utilizando el token
+            getProductsData(token)
+            .then((data) => {
+                setProducts(data);
+            })
+            .catch((error) => {
+                console.error('Error al obtener los productos:', error);
+            });
+        }
     }, []);
 
     return(
