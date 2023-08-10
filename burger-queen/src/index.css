@@ -27,6 +27,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: rgb(70, 69, 69);
+  font-family: 'Amaranth', sans-serif;
 }
 
 h1 {
@@ -34,6 +35,11 @@ h1 {
   line-height: 1.1;
 }
 
+.logo{
+  width: 60%;
+  height: 30%;
+  margin-bottom: 2rem;
+}
 
 
 @media (prefers-color-scheme: light) {

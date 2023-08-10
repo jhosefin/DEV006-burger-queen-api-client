@@ -1,54 +1,183 @@
-/* .logo{
-    width: 30%;
-    margin-top: -4rem;
-    margin-left: -40rem;
-} */
-.container{
-    font-family: 'Amaranth', sans-serif;
-    width: 200%;
-    margin-left: -7rem;
+/* Estilos generales */
+
+.container {
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
 }
-#menu{
-    font-family: 'Amiri', serif;
-    font-size: 50px;
-    margin-left: -20rem;
+
+#contenedor-principal {
+  background-color: white;
+  display: flex;
+  gap: 5rem;
+  padding: 2rem; /* Agrega espaciado interno */
 }
-#breackfast{
-    color: #EEA035;
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
-#lunch{
-    color: #ACDBDF;
+
+.card-img-top {
+  width: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: auto; /* La altura se ajustará automáticamente */
 }
-#contenedor-principal{
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
+
+.derecha {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem; /* Agrega espaciado entre elementos */
 }
-.cards-breakfast{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/* Estilos para los botones de vista */
+.menu-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  font-size: 20px; /* Ajusta el tamaño de fuente según tus necesidades */
+  display: flex;
+  text-align: left;
+}
+
+.menu-button:hover {
+    background-color:#eea13526;
+}
+  
+/* Estilo para el botón activo */
+.menu-button.active {
+  font-weight: bold;
+  font-size: 40px;
+  width: auto;
+  /* Otros estilos para el botón activo */
+}
+
+#breackfast {
+  color: #EEA035;
+}
+
+#lunch {
+  color: #ACDBDF;
+}
+
+#menu {
+  display: flex;
+  font-family: 'Amiri', serif;
+  font-size: 20px;
+}
+
+.card{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.cards-breakfast, .cards-lunch{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: ; */
+  grid-column-gap: 0px;
+  grid-row-gap: 5px;
+}
+.divider {
+width: 1px;
+height: 100vh;
+/* position: absolute; */
+/* top: 25%;
+left: 60%; */
+/* transform: translateX(-50%); */
+/* width: 1px;
+height: 70%; */
+background-color: black;
+z-index: 1; /* Asegura que esté en frente de otros elementos */
+}
+
+.name-input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: border-color 0.2s;
+}
+
+.name-input:focus {
+  border-color: #007bff;
+}
+.remove{
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2rem;
 
 }
-.cards-lunch{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+
+.btn-check:checked + .btn{
+  color: black;
+  background-color: #7DE494;
+  border-color: #11431C;
+}
+.btn-outline-danger{
+  color: black;
+  background-color:rgba(233, 25, 25, 0.76);
+  border-color:#280101;
+}
+.botones label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Amaranth', sans-serif;
+  height: 1.5rem;
+  width: 6rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  border-color:#EEA035;
+  text-align: center;
+  gap: 1rem;
+}
+
+.modal-content button{
+  cursor: pointer;
+  height: 1.5rem;
+  width: 6rem;
 
 }
-.card-img-top{
-    width: 20%;
-    height: 20%;
+#no{
+  background-color: #7DE494;
+  border-color: #11431C;
 }
-.derecha{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.botones{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+#yes{
+  background-color:rgba(233, 25, 25, 0.76);
+  border-color:#280101;
 }
