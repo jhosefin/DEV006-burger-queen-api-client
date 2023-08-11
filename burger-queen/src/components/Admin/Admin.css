@@ -1,0 +1,15 @@
+.componente-name{
+    position: relative;
+    color: white;
+    margin-left: 50rem;
+    margin-top: -5rem;
+    display: flex; /* Agregar flex para alinear los elementos uno al lado del otro */
+    align-items: center; /* Centrar verticalmente los elementos */
+  
+  }
+  /* Estilos para la imagen */
+  .componente-name img {
+    width: 50px; /* Ajustar el tamaño de la imagen según tus necesidades */
+    height: 50px;
+    margin-right: 1rem; /* Agregar un margen derecho para separar la imagen del texto */
+  }

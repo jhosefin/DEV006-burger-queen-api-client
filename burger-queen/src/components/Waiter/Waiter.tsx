@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation/* , useNavigate */ } from 'react-router-dom';
 import './Waiter.css';
 import remove from '../img/Remove.png'
+import waiter from '../img/Waiter.png'
 import { getProductsData } from '../../API/api';
 
 interface Product {
@@ -17,11 +19,16 @@ interface OrderItem {
 }
 
 const Waiter: React.FC = () => {
+/*     const navigate = useNavigate(); */
     const [products, setProducts] = useState<Product[]>([]);
     const [name, setName] = useState('');
     const [orderItems, setOrderItems] = useState<OrderItem[]>([]);
     const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);
 
+    const location = useLocation();
+    const email = location.state?.email || '';
+    const username = email.split('@')[0]; // Obtiene la parte antes del símbolo "@"
+    const capitalizedUsername = username.charAt(0).toUpperCase() + username.slice(1);
 
     const openConfirmationModal = () => {
         setIsConfirmationModalOpen(true);
@@ -70,15 +77,17 @@ const Waiter: React.FC = () => {
     };
 
     useEffect(() => {
-      const token = localStorage.getItem('accessToken'); // Asegúrate de que esté almacenado como 'accessToken'
+      const token = localStorage.getItem('accessToken');
         console.log(token)
         if (token) {
             // Obtén los productos utilizando el token
             getProductsData(token)
             .then((data) => {
+                console.log(data)
                 setProducts(data);
             })
             .catch((error) => {
+                console.log(error,'aca es')
                 console.error('Error al obtener los productos:', error);
             });
         }
@@ -92,10 +101,19 @@ const Waiter: React.FC = () => {
         setName('');
     };
 
+/*     const handleLogout = () => {
+        navigate('/');
+    }; */
+
     return(
         // Contenedor de la tabla para pedidos
         <div className="container">
-
+            <div className='componente-name'>
+                <img src={waiter} alt='waiter'></img>
+                <h6>{capitalizedUsername} Waiter</h6>
+{/*                 <button className="logout-button" onClick={handleLogout}>Exit</button> */}
+            </div>
+            
      {/* Botones para vista de menu */}
             <div className="container text-center" id='menu'>
                 <div className="col">
@@ -176,6 +194,9 @@ const Waiter: React.FC = () => {
                     <td>${orderItem.product.price * orderItem.quantity}</td>
                 </tr>
             ))}
+             <tr>
+                <td>Total: ${orderItems.reduce((total, orderItem) => total + orderItem.product.price * orderItem.quantity, 0)}</td>
+            </tr>
             </tbody>
             </table>
             {/* Fin del Contenido de la parte Derecha tabla de información */}

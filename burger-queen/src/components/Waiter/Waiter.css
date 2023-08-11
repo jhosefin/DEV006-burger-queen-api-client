@@ -181,3 +181,28 @@ z-index: 1; /* Asegura que esté en frente de otros elementos */
   background-color:rgba(233, 25, 25, 0.76);
   border-color:#280101;
 }
+.componente-name{
+  position: relative;
+  color: white;
+  margin-left: 50rem;
+  margin-top: -5rem;
+  display: flex; /* Agregar flex para alinear los elementos uno al lado del otro */
+  align-items: center; /* Centrar verticalmente los elementos */
+
+}
+/* Estilos para la imagen */
+.componente-name img {
+  width: 50px; /* Ajustar el tamaño de la imagen según tus necesidades */
+  height: 50px;
+  margin-right: 1rem; /* Agregar un margen derecho para separar la imagen del texto */
+}
+.table h5{
+  margin-top: 2rem;
+  margin-left: 0.4rem;
+  color:#280101;
+}
+/* .componente-name button {
+  cursor: pointer;
+  margin-left: 1rem;
+  height: 2rem;
+} */

@@ -33,11 +33,11 @@ const Login: React.FC = () => {
       const userData = await getUserData(formData.email, loginResponse.accessToken);
       console.log(loginResponse, userData)
       if (userData.role === 'admin') {
-        navigate('/admin');
+        navigate('/admin', { state: { email: formData.email } });
       } else if (userData.role === 'waiter') {
-        navigate('/waiter');
+        navigate('/waiter', { state: { email: formData.email } });
       } else if (userData.role === 'chef') {
-        navigate('/chef');
+        navigate('/chef', { state: { email: formData.email } });
       }
   
       // Restableciendo el formulario después de la respuesta exitosa
