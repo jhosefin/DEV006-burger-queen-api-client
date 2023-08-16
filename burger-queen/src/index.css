@@ -35,12 +35,6 @@ h1 {
   line-height: 1.1;
 }
 
-.logo{
-  width: 60%;
-  height: 30%;
-  margin-bottom: 2rem;
-}
-
 
 @media (prefers-color-scheme: light) {
   :root {

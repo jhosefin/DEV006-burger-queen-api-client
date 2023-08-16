@@ -68,13 +68,14 @@ const Login: React.FC = () => {
 
   return (
     <div className='login'>
-    <form onSubmit={handleSubmit}>
-    <h2>Login</h2>
+      <img src='./src/assets/logo.png' className='logo'></img>
+      <form onSubmit={handleSubmit}>
+      <h1>Login</h1>
     {error && <p className='error'>{error}</p>}
     <div className="form-group">
     <label htmlFor="email">Email:</label>
     <input
-      type="text"
+      type="email"
       id="email"
       name="email"
       value={formData.email}
@@ -98,7 +99,7 @@ const Login: React.FC = () => {
     </form>
     <section className='fecha'>
         <img src='./src/components/img/Cheeseburger.png' alt="logo"/>
-        {today && <h3 className='today'>{today.toDateString()}</h3>}
+        {today && <h2 className='today'>{today.toDateString()}</h2>}
       </section>
   </div>
   );

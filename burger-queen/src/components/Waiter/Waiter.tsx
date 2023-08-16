@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation/* , useNavigate */ } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import './Waiter.css';
 import remove from '../img/Remove.png'
 import waiter from '../img/Waiter.png'
 import { getProductsData } from '../../API/api';
+import Header from '../header/header';
 
 interface Product {
     _id: string;
@@ -19,7 +20,6 @@ interface OrderItem {
 }
 
 const Waiter: React.FC = () => {
-/*     const navigate = useNavigate(); */
     const [products, setProducts] = useState<Product[]>([]);
     const [name, setName] = useState('');
     const [orderItems, setOrderItems] = useState<OrderItem[]>([]);
@@ -77,8 +77,8 @@ const Waiter: React.FC = () => {
     };
 
     useEffect(() => {
-      const token = localStorage.getItem('accessToken');
-        console.log(token)
+      const token = localStorage.getItem('token');
+        console.log('aqui el token para productos',token)
         if (token) {
             // Obtén los productos utilizando el token
             getProductsData(token)
@@ -101,18 +101,10 @@ const Waiter: React.FC = () => {
         setName('');
     };
 
-/*     const handleLogout = () => {
-        navigate('/');
-    }; */
-
     return(
         // Contenedor de la tabla para pedidos
         <div className="container">
-            <div className='componente-name'>
-                <img src={waiter} alt='waiter'></img>
-                <h6>{capitalizedUsername} Waiter</h6>
-{/*                 <button className="logout-button" onClick={handleLogout}>Exit</button> */}
-            </div>
+            <Header username={capitalizedUsername} userImage={waiter} userRole='Waiter' />
             
      {/* Botones para vista de menu */}
             <div className="container text-center" id='menu'>
