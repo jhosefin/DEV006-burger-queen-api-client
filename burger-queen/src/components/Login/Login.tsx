@@ -33,11 +33,11 @@ const Login: React.FC = () => {
       const userData = await getUserData(formData.email, loginResponse.accessToken);
       console.log(loginResponse, userData)
       if (userData.role === 'admin') {
-        navigate('/admin');
+        navigate('/admin', { state: { email: formData.email } });
       } else if (userData.role === 'waiter') {
-        navigate('/waiter');
+        navigate('/waiter', { state: { email: formData.email } });
       } else if (userData.role === 'chef') {
-        navigate('/chef');
+        navigate('/chef', { state: { email: formData.email } });
       }
   
       // Restableciendo el formulario después de la respuesta exitosa
@@ -68,13 +68,14 @@ const Login: React.FC = () => {
 
   return (
     <div className='login'>
-    <form onSubmit={handleSubmit}>
-    <h2>Welcome</h2>
+      <img src='./src/assets/logo.png' className='logo'></img>
+      <form onSubmit={handleSubmit}>
+      <h1>Welcome</h1>
     {error && <p className='error'>{error}</p>}
     <div className="form-group">
     <label htmlFor="email">Email:</label>
     <input
-      type="text"
+      type="email"
       id="email"
       name="email"
       value={formData.email}
@@ -98,7 +99,7 @@ const Login: React.FC = () => {
     </form>
     <section className='fecha'>
         <img src='./src/components/img/Cheeseburger.png' alt="logo"/>
-        {today && <h3 className='today'>{today.toDateString()}</h3>}
+        {today && <h2 className='today'>{today.toDateString()}</h2>}
       </section>
   </div>
   );

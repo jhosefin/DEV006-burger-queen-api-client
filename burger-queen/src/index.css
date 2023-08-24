@@ -27,13 +27,13 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: rgb(70, 69, 69);
+  font-family: 'Amaranth', sans-serif;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
 
 
 @media (prefers-color-scheme: light) {
