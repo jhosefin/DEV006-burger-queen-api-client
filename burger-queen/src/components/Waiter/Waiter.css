@@ -8,7 +8,7 @@
 #contenedor-principal {
   background-color: white;
   display: flex;
-  gap: 5rem;
+  gap: 4rem;
   padding: 2rem; /* Agrega espaciado interno */
 }
 
@@ -77,7 +77,7 @@
 }
 
 .card{
-  width: 90%;
+/*   width: 90%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,7 +87,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* grid-template-rows: ; */
-  grid-column-gap: 0px;
+  grid-column-gap: 5px;
   grid-row-gap: 5px;
 }
 .divider {
@@ -113,7 +113,7 @@ z-index: 1; /* Asegura que esté en frente de otros elementos */
 }
 .remove{
   cursor: pointer;
-  height: 2.5rem;
+  height: 2rem;
   width: 2rem;
 
 }
@@ -181,4 +181,10 @@ z-index: 1; /* Asegura que esté en frente de otros elementos */
   margin-top: 2rem;
   margin-left: 0.4rem;
   color:#280101;
+}
+
+.izquierda {
+  width: 50%; /* Ajusta el ancho de la sección a tu preferencia */
+  height: 10%; /* Ajusta la altura de la sección a tu preferencia */
+  overflow-x: auto; /* Habilita el desplazamiento vertical si el contenido excede el área */
 }
