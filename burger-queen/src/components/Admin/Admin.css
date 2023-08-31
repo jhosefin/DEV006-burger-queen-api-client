@@ -1,15 +1,91 @@
-.componente-name{
-    position: relative;
-    color: white;
-    margin-left: 50rem;
-    margin-top: -5rem;
-    display: flex; /* Agregar flex para alinear los elementos uno al lado del otro */
-    align-items: center; /* Centrar verticalmente los elementos */
-  
-  }
-  /* Estilos para la imagen */
-  .componente-name img {
-    width: 50px; /* Ajustar el tamaño de la imagen según tus necesidades */
-    height: 50px;
-    margin-right: 1rem; /* Agregar un margen derecho para separar la imagen del texto */
-  }
+
+
+/* Estilo base para el td que contiene la imagen */
+/* .img-cell {
+  text-align: center;
+  padding: 10px; 
+  background-color: lightblue;
+  border-radius: 50px;
+} */
+
+/* Estilos para diferentes fondos de colores */
+/* .img-cell.blue {
+  background-color: lightblue;
+}
+
+.img-cell.green {
+  background-color: lightgreen;
+}
+
+.img-cell.pink {
+  background-color: lightpink;
+}
+
+.headertable{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.bodytable{
+  background-color: aquamarine;
+  display: flex;
+  gap:8rem;
+}
+.buttonProduct{
+  display: inline;
+} */
+#contenedor-principal {
+  text-align: center;
+  margin-top: 20px;
+  height: 500px; /* Establece la altura deseada */
+    overflow: hidden; /* Evita que el contenido desborde el contenedor */
+}
+.table-container {
+  max-height: 100%;
+  overflow: auto; /* Agrega scroll si el contenido excede la altura */
+  width: 100%;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.table-primary {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.headertable {
+  /* background-color: #ccc; */
+  font-size: 1.5rem;
+  color: rgb(138, 83, 2);
+}
+
+.bodytable td {
+  padding: 10px;
+  /* border: 1px solid #ccc; */
+}
+
+.img-cell {
+  width: 100px;
+}
+
+.imgproduct {
+  max-width: 100%;
+  height: auto;
+}
+
+.buttonProduct button {
+  display: inline;
+  margin-right: 20px;
+  width: 6rem;
+  height: 2rem;
+  color: white;
+}
+.editButton{
+  background-color: rgb(149, 219, 43);
+}
+.deleteButton{
+  background-color: rgb(215, 26, 26);
+}
