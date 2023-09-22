@@ -34,11 +34,14 @@
 .buttonProduct{
   display: inline;
 } */
-#contenedor-principal {
+#contenedor-principaladmin {
   text-align: center;
   margin-top: 20px;
   height: 500px; /* Establece la altura deseada */
     overflow: hidden; /* Evita que el contenido desborde el contenedor */
+    background-color: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+border-radius: 10px;
 }
 .table-container {
   max-height: 100%;
@@ -60,11 +63,15 @@
   /* background-color: #ccc; */
   font-size: 1.5rem;
   color: rgb(138, 83, 2);
+  border-bottom: 1px solid #101010;
+  font-family: 'Amiri', sans-serif;
 }
 
 .bodytable td {
   padding: 10px;
   /* border: 1px solid #ccc; */
+  border-bottom: 1px solid #bcbaba;
+  font-family: 'Amaranth', sans-serif;
 }
 
 .img-cell {
@@ -80,12 +87,25 @@
   display: inline;
   margin-right: 20px;
   width: 6rem;
-  height: 2rem;
-  color: white;
+  height: 4rem;
+  border-radius: 50%;
 }
 .editButton{
-  background-color: rgb(149, 219, 43);
+ 
+  background-color: #7DE494;
+  color: #11431C;
 }
 .deleteButton{
-  background-color: rgb(215, 26, 26);
+  background-color: rgba(233, 25, 25, 0.76);
+  color: #280101;
+}
+.add-product-button{
+  background-color: transparent;
+  border: none;
+  width: 0;
+  height: 0;
+}
+.add-product-button:hover{
+  background-color: transparent;
+  border: none;
 }
